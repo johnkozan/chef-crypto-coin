@@ -21,4 +21,8 @@ attribute :rpcpassword,    :kind_of => String, :required => true
 attribute :rpcport,        :kind_of => Integer
 attribute :port,           :kind_of => Integer, :required => true
 
+attribute :server,         :kind_of => Integer, :default: 0
+attribute :testnet,         :kind_of => Integer, :default: 0
+attribute :txindex,        :kind_of => Integer, :default: 0
+
 attr_accessor :exists
