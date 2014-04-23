@@ -30,9 +30,16 @@ action :install do
   src_directory = ::File.join(new_resource.clone_path, 'src')
   conf_file = ::File.join(new_resource.home, "#{new_resource.name}.conf")
 
+  bash "clean #{new_resource.name} level db" do
+    code          "make clean"
+    cwd           "#{src_directory}/src/leveldb"
+    action        :nothing
+    notifies      :run, "bash[strip #{new_resource.name}]", :immediately
+  end
+
   bash "compile #{new_resource.name}" do
     code          "./autogen.sh; ./configure; make"
-    cwd           src_directory
+    cwd           new_resource.clone_path
     action        :nothing
     notifies      :run, "bash[strip #{new_resource.name}]", :immediately
   end

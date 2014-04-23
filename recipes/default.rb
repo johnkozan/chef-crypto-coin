@@ -40,7 +40,11 @@ end
 
 # Required packages
 package "git-core"
+package "libtool"
+package "autotools-dev"
+package "autoconf"
 package "libssl-dev"
+package "pkg-config"
 package "libdb4.8-dev"
 package "libdb4.8++-dev"
 package "libboost1.48-all-dev"
