@@ -20,6 +20,7 @@ attribute :revision,        :kind_of => String, :default => 'master'
 attribute :server,          :kind_of => Integer, :default => 0
 attribute :rpcuser,         :kind_of => String, :required => true
 attribute :rpcpassword,     :kind_of => String, :required => true
+attribute :rpcallowip,      :kind_of => String, :required => false
 
 attribute :testnet,         :kind_of => Integer, :default => 0
 attribute :txindex,         :kind_of => Integer, :default => 0
