@@ -109,6 +109,7 @@ def config_hash
   @new_resource.conf['server'] = @new_resource.server
   @new_resource.conf['rpcuser'] = @new_resource.rpcuser
   @new_resource.conf['rpcpassword'] = @new_resource.rpcpassword
+  @new_resource.conf['rpcallowip'] = @new_resource.rpcallowip
   @new_resource.conf['testnet'] = @new_resource.testnet
   @new_resource.conf['txindex'] = @new_resource.txindex
   @new_resource.conf['irc'] = 1
